@@ -2,119 +2,177 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
-import SectionTitle from '../components/ui/SectionTitle';
 import Parallax from '../components/ui/Parallax';
-import Grid from '../components/ui/Grid';
-import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import Map from '../components/map/Map';
+import Gallery from '../components/gallery/Gallery';
+
 
 // Placeholder image URLs - replace with actual images
 const heroImage = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const project1Image = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const project2Image = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const project3Image = 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const project4Image = 'https://images.unsplash.com/photo-1574621100236-d25b64cfd647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80';
-const project5Image = 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1737&q=80';
-const project6Image = 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80';
 
-// Project data
-const projects = [
+// Property data
+const properties = [
   {
     id: '1',
-    title: 'Valley View Office Complex',
-    category: 'commercial',
-    location: 'Brownsville, TX',
-    year: '2022',
-    image: project1Image,
-    description: 'A modern office complex featuring sustainable design elements and state-of-the-art facilities.',
-    quickFacts: [
-      '50,000 square feet of office space',
-      'LEED Gold certified sustainable design',
-      'State-of-the-art technology infrastructure',
-      'Collaborative workspaces and meeting rooms',
-      'On-site amenities including café and fitness center'
-    ]
+    title: 'Harlingen Terrace',
+    price: '$0',
+    status: 'coming-soon',
+    location: 'Harlingen, TX',
+    description: 'Introducing Harlingen\'s newest townhomes - gorgeous, modern, and thoughtfully designed with high-end finishes and unbeatable convenience.',
+    features: {
+      beds: 3,
+      baths: 2,
+      sqft: 1680
+    },
+    images: [
+      {
+        id: '1-1',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Harlingen Terrace - Exterior'
+      },
+      {
+        id: '1-2',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Harlingen Terrace - Living Room'
+      },
+      {
+        id: '1-3',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Harlingen Terrace - Kitchen'
+      }
+    ],
+    mapLocation: {
+      lat: 26.1906,
+      lng: -97.6961
+    }
   },
   {
     id: '2',
-    title: 'Riverside Luxury Homes',
-    category: 'residential',
+    title: 'Bicentennial Townhomes',
+    price: '$0',
+    status: 'coming-soon',
     location: 'McAllen, TX',
-    year: '2021',
-    image: project2Image,
-    description: 'A collection of custom-built luxury homes along the Rio Grande river, featuring premium finishes and amenities.',
-    quickFacts: [
-      '12 custom luxury homes',
-      '3,500-5,000 square feet per home',
-      'Premium finishes and smart home technology',
-      'Private access to Rio Grande waterfront',
-      'Energy-efficient design and construction'
-    ]
+    description: 'Experience luxury living in McAllen with these brand-new, gorgeous townhomes featuring modern designs, high-end finishes, and a prime location!',
+    features: {
+      beds: 3,
+      baths: 2,
+      sqft: 1865
+    },
+    images: [
+      {
+        id: '2-1',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Bicentennial Townhomes - Exterior'
+      },
+      {
+        id: '2-2',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Bicentennial Townhomes - Living Room'
+      },
+      {
+        id: '2-3',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: 'Bicentennial Townhomes - Kitchen'
+      }
+    ],
+    mapLocation: {
+      lat: 26.2034,
+      lng: -98.2300
+    }
   },
   {
     id: '3',
-    title: 'Palm Heights Apartments',
-    category: 'residential',
-    location: 'Harlingen, TX',
-    year: '2020',
-    image: project3Image,
-    description: 'A multi-family residential development with modern amenities and sustainable features.',
-    quickFacts: [
-      '120 apartment units',
-      'Mix of 1, 2, and 3 bedroom layouts',
-      'Community pool and fitness center',
-      'Sustainable landscaping and water management',
-      'Walking distance to shopping and dining'
-    ]
+    title: '2604 E Comal Rd',
+    price: '$285,000',
+    status: 'for-sale',
+    location: 'Highland Heights Subdivision',
+    description: 'Discover refined living in a 3-bedroom, 2.5 bathroom, 1,482 Living SqFt home nestled in the community, Highland Heights Subdivision.',
+    features: {
+      beds: 3,
+      baths: 2.5,
+      sqft: 1482
+    },
+    images: [
+      {
+        id: '3-1',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80',
+        source: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80',
+        title: '2604 E Comal Rd - Exterior'
+      },
+      {
+        id: '3-2',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: '2604 E Comal Rd - Living Room'
+      },
+      {
+        id: '3-3',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: '2604 E Comal Rd - Kitchen'
+      }
+    ],
+    mapLocation: {
+      lat: 26.1800,
+      lng: -97.7000
+    }
   },
   {
     id: '4',
-    title: 'Coastal Medical Center',
-    category: 'commercial',
-    location: 'South Padre Island, TX',
-    year: '2019',
-    image: project4Image,
-    description: 'A state-of-the-art medical facility designed to serve the growing coastal community.',
-    quickFacts: [
-      '35,000 square foot medical facility',
-      'Advanced diagnostic imaging center',
-      'Emergency care capabilities',
-      'Hurricane-resistant construction',
-      'Specialized care for coastal community needs'
-    ]
-  },
-  {
-    id: '5',
-    title: 'Downtown Retail Plaza',
-    category: 'commercial',
-    location: 'Los Fresnos, TX',
-    year: '2018',
-    image: project5Image,
-    description: 'A vibrant retail plaza in the heart of downtown, featuring a mix of local and national businesses.',
-    quickFacts: [
-      '25,000 square feet of retail space',
-      'Accommodates 15 retail businesses',
-      'Central courtyard with water feature',
-      'Ample parking with 150 spaces',
-      'Designed to complement historic downtown architecture'
-    ]
-  },
-  {
-    id: '6',
-    title: 'Sunset Villa Renovation',
-    category: 'renovation',
-    location: 'Port Isabel, TX',
-    year: '2017',
-    image: project6Image,
-    description: 'A complete renovation of a historic villa, preserving its character while adding modern amenities.',
-    quickFacts: [
-      'Complete renovation of 4,200 square foot historic home',
-      'Preservation of original architectural details',
-      'Modern kitchen and bathroom upgrades',
-      'Energy-efficient windows and HVAC system',
-      'Outdoor living space with Gulf views'
-    ]
-  },
+    title: '1720 E Tip',
+    price: '$315,000',
+    status: 'for-sale',
+    location: 'Heights on Wisconsin Phase 3 Subdivision',
+    description: 'Discover refined living in a 3-bedroom, 2.5 bathroom, 1,678 Living SqFt home nestled in the community, Heights on Wisconsin Phase 3 Subdivision.',
+    features: {
+      beds: 3,
+      baths: 2.5,
+      sqft: 1678
+    },
+    images: [
+      {
+        id: '4-1',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: '1720 E Tip - Exterior'
+      },
+      {
+        id: '4-2',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: '1720 E Tip - Living Room'
+      },
+      {
+        id: '4-3',
+        type: 'image',
+        thumbnail: 'https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        source: 'https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+        title: '1720 E Tip - Kitchen'
+      }
+    ],
+    mapLocation: {
+      lat: 26.2100,
+      lng: -97.7200
+    }
+  }
 ];
 
 const PageHeader = styled(Parallax)`
@@ -136,164 +194,222 @@ const PageTitle = styled.h1`
   }
 `;
 
-const FilterContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: ${({ theme }) => theme.spacing.md};
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-`;
-
-const FilterButton = styled.button<{ $active: boolean }>`
-  background-color: ${({ theme, $active }) => 
-    $active ? theme.colors.gold : 'transparent'};
-  color: ${({ theme, $active }) => 
-    $active ? theme.colors.darkGrey : theme.colors.darkGrey};
-  border: 2px solid ${({ theme, $active }) => 
-    $active ? theme.colors.gold : theme.colors.lightGrey};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.md}`};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all ${({ theme }) => theme.transitions.fast};
+const PageSubtitle = styled.p`
+  font-size: 1.2rem;
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   
-  &:hover {
-    background-color: ${({ theme, $active }) => 
-      $active ? theme.colors.gold : theme.colors.lightGrey};
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 1.5rem;
   }
 `;
 
-const ProjectCard = styled(Card)`
-  height: 100%;
-`;
-
-const ProjectDetails = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-  font-size: 0.9rem;
-  color: ${({ theme }) => theme.colors.gold};
-`;
-
-const ProjectLocation = styled.span``;
-
-const ProjectYear = styled.span``;
-
-const ProjectQuickFacts = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: ${({ theme }) => theme.spacing.md} 0;
-`;
-
-const ProjectQuickFact = styled.li`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: ${({ theme }) => theme.spacing.xs};
-  font-size: 0.85rem;
-  
-  &::before {
-    content: '✓';
-    color: ${({ theme }) => theme.colors.gold};
-    font-weight: bold;
-    margin-right: ${({ theme }) => theme.spacing.xs};
-  }
-`;
-
-const FeaturedProjectSection = styled.div`
+const PropertiesGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: ${({ theme }) => theme.spacing.xl};
-  margin-bottom: ${({ theme }) => theme.spacing.xxl};
   
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
-const FeaturedProjectImage = styled.img`
+const PropertyCard = styled.div`
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+  overflow: hidden;
+`;
+
+const PropertyImageContainer = styled.div`
+  position: relative;
+  height: 250px;
+  cursor: pointer;
+`;
+
+const PropertyImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  box-shadow: ${({ theme }) => theme.shadows.medium};
 `;
 
-const FeaturedProjectContent = styled.div`
+const PropertyStatusBadge = styled.div<{ $status: string }>`
+  position: absolute;
+  top: ${({ theme }) => theme.spacing.md};
+  right: ${({ theme }) => theme.spacing.md};
+  background-color: ${({ theme, $status }) => 
+    $status === 'for-sale' ? theme.colors.red : theme.colors.darkGrey};
+  color: ${({ theme }) => theme.colors.white};
+  padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.md}`};
+  border-radius: ${({ theme }) => theme.borderRadius.small};
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+`;
+
+const PropertyContent = styled.div`
+  padding: ${({ theme }) => theme.spacing.lg};
+`;
+
+const PropertyTitle = styled.h3`
+  font-size: 1.5rem;
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
+  color: ${({ theme }) => theme.colors.darkGrey};
+`;
+
+const PropertyPrice = styled.div`
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.red};
+`;
+
+const PropertyDescription = styled.p`
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.darkGrey};
+  line-height: 1.5;
+`;
+
+const PropertyFeatures = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  padding-bottom: ${({ theme }) => theme.spacing.md};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
+`;
+
+const PropertyFeature = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.darkGrey};
+  font-size: 0.9rem;
+`;
+
+const FeatureIcon = styled.span`
+  margin-right: ${({ theme }) => theme.spacing.xs};
+  font-size: 1.1rem;
+`;
+
+const PropertyActions = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+
+const ModalOverlay = styled.div<{ $isOpen: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
 `;
 
-const FeaturedProjectTitle = styled.h3`
+const ModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: ${({ theme }) => theme.spacing.md};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
+`;
+
+const ModalTitle = styled.h3`
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.darkGrey};
-  font-size: 1.8rem;
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
+  margin: 0;
 `;
 
-const FeaturedProjectDetails = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-  font-size: 1rem;
-  color: ${({ theme }) => theme.colors.gold};
-`;
-
-const FeaturedProjectDescription = styled.p`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-  line-height: 1.6;
-`;
-
-const FeaturedProjectFeatures = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-`;
-
-const FeaturedProjectFeature = styled.li`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
+const ModalClose = styled.button`
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.darkGrey};
   
-  &::before {
-    content: '✓';
-    color: ${({ theme }) => theme.colors.gold};
-    font-weight: bold;
-    margin-right: ${({ theme }) => theme.spacing.sm};
+  &:hover {
+    color: ${({ theme }) => theme.colors.red};
   }
 `;
 
-const CallToActionSection = styled(Section)`
-  text-align: center;
+const ModalBody = styled.div`
+  flex: 1;
+  overflow: hidden;
+  position: relative;
 `;
 
-const CTAContent = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
+const ViewToggle = styled.div`
+  position: absolute;
+  top: ${({ theme }) => theme.spacing.md};
+  right: ${({ theme }) => theme.spacing.md};
+  z-index: 10;
+  display: flex;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  box-shadow: ${({ theme }) => theme.shadows.medium};
+  overflow: hidden;
 `;
 
-const CTATitle = styled.h2`
-  font-size: 2rem;
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.white};
+const ToggleButton = styled.button<{ $active: boolean }>`
+  background-color: ${({ theme, $active }) => 
+    $active ? theme.colors.red : theme.colors.white};
+  color: ${({ theme, $active }) => 
+    $active ? theme.colors.white : theme.colors.darkGrey};
+  border: none;
+  padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.md}`};
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
   
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 2.5rem;
+  &:hover {
+    background-color: ${({ theme, $active }) => 
+      $active ? theme.colors.red : theme.colors.lightGrey};
   }
-`;
-
-const CTAText = styled.p`
-  font-size: 1.1rem;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-  color: ${({ theme }) => theme.colors.white};
 `;
 
 const ProjectsPage: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
+  const [selectedProperty, setSelectedProperty] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'photo' | 'map'>('photo');
   
-  const filteredProjects = activeFilter === 'all'
-    ? projects
-    : projects.filter(project => project.category === activeFilter);
+  const property = selectedProperty 
+    ? properties.find(p => p.id === selectedProperty) 
+    : null;
+  
+  const handlePropertyClick = (id: string) => {
+    setSelectedProperty(id);
+    setViewMode('photo');
+  };
+  
+  const handleCloseModal = () => {
+    setSelectedProperty(null);
+  };
+  
+  
+  const mapLocations = property 
+    ? [
+        {
+          id: property.id,
+          title: property.title,
+          description: property.description,
+          image: property.images[0].source,
+          position: property.mapLocation
+        }
+      ]
+    : [];
   
   return (
     <>
@@ -304,126 +420,92 @@ const ProjectsPage: React.FC = () => {
         overlayColor="#000000"
         overlayOpacity={0.6}
       >
-        <PageTitle>Our Projects</PageTitle>
+        <PageTitle>Featured Homes</PageTitle>
+        <PageSubtitle>Check out these ready for move-in homes!</PageSubtitle>
       </PageHeader>
       
       <Section padding="large">
         <Container>
-          <SectionTitle
-            title="Featured Project"
-            subtitle="Valley View Office Complex - Our latest commercial development"
-            alignment="center"
-          />
-          
-          <FeaturedProjectSection>
-            <FeaturedProjectImage src={project1Image} alt="Valley View Office Complex" />
-            <FeaturedProjectContent>
-              <FeaturedProjectTitle>Valley View Office Complex</FeaturedProjectTitle>
-              <FeaturedProjectDetails>
-                <span>Brownsville, TX</span>
-                <span>•</span>
-                <span>Commercial</span>
-                <span>•</span>
-                <span>2022</span>
-              </FeaturedProjectDetails>
-              <FeaturedProjectDescription>
-                The Valley View Office Complex is a state-of-the-art commercial development 
-                located in the heart of Brownsville. This 50,000 square foot facility features 
-                modern design elements, sustainable building practices, and premium amenities 
-                for businesses of all sizes.
-              </FeaturedProjectDescription>
-              <FeaturedProjectFeatures>
-                <FeaturedProjectFeature>50,000 square feet of office space</FeaturedProjectFeature>
-                <FeaturedProjectFeature>LEED Gold certified sustainable design</FeaturedProjectFeature>
-                <FeaturedProjectFeature>State-of-the-art technology infrastructure</FeaturedProjectFeature>
-                <FeaturedProjectFeature>Collaborative workspaces and meeting rooms</FeaturedProjectFeature>
-                <FeaturedProjectFeature>On-site amenities including café and fitness center</FeaturedProjectFeature>
-              </FeaturedProjectFeatures>
-              <Button to="/contact">Inquire About Similar Projects</Button>
-            </FeaturedProjectContent>
-          </FeaturedProjectSection>
-        </Container>
-      </Section>
-      
-      <Section variant="secondary" padding="large">
-        <Container>
-          <SectionTitle
-            title="Our Portfolio"
-            subtitle="Explore our diverse range of construction projects"
-            alignment="center"
-          />
-          
-          <FilterContainer>
-            <FilterButton
-              $active={activeFilter === 'all'}
-              onClick={() => setActiveFilter('all')}
-            >
-              All Projects
-            </FilterButton>
-            <FilterButton
-              $active={activeFilter === 'commercial'}
-              onClick={() => setActiveFilter('commercial')}
-            >
-              Commercial
-            </FilterButton>
-            <FilterButton
-              $active={activeFilter === 'residential'}
-              onClick={() => setActiveFilter('residential')}
-            >
-              Residential
-            </FilterButton>
-            <FilterButton
-              $active={activeFilter === 'renovation'}
-              onClick={() => setActiveFilter('renovation')}
-            >
-              Renovation
-            </FilterButton>
-          </FilterContainer>
-          
-          <Grid
-            columns={{
-              xs: 1,
-              sm: 2,
-              md: 2,
-              lg: 3,
-            }}
-            gap="medium"
-          >
-            {filteredProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                image={project.image}
-                title={project.title}
-                content={project.description}
-              >
-                <ProjectDetails>
-                  <ProjectLocation>{project.location}</ProjectLocation>
-                  <ProjectYear>{project.year}</ProjectYear>
-                </ProjectDetails>
-                <ProjectQuickFacts>
-                  {project.quickFacts.slice(0, 3).map((fact, index) => (
-                    <ProjectQuickFact key={index}>{fact}</ProjectQuickFact>
-                  ))}
-                </ProjectQuickFacts>
-              </ProjectCard>
+          <PropertiesGrid>
+            {properties.map((property) => (
+              <PropertyCard key={property.id}>
+                <PropertyImageContainer onClick={() => handlePropertyClick(property.id)}>
+                  <PropertyImage src={property.images[0].source} alt={property.title} />
+                  <PropertyStatusBadge $status={property.status}>
+                    {property.status === 'coming-soon' ? 'Coming Soon!' : 'For Sale'}
+                  </PropertyStatusBadge>
+                </PropertyImageContainer>
+                <PropertyContent>
+                  <PropertyTitle>{property.title}</PropertyTitle>
+                  <PropertyPrice>{property.price}</PropertyPrice>
+                  <PropertyDescription>{property.description}</PropertyDescription>
+                  <PropertyFeatures>
+                    <PropertyFeature>
+                      <FeatureIcon>🛏️</FeatureIcon> {property.features.beds} Beds
+                    </PropertyFeature>
+                    <PropertyFeature>
+                      <FeatureIcon>🚿</FeatureIcon> {property.features.baths} Baths
+                    </PropertyFeature>
+                    <PropertyFeature>
+                      <FeatureIcon>📏</FeatureIcon> {property.features.sqft} SqFt
+                    </PropertyFeature>
+                  </PropertyFeatures>
+                  <PropertyActions>
+                    <Button to="#" onClick={() => handlePropertyClick(property.id)}>
+                      Get Directions
+                    </Button>
+                    <Button to="/contact" variant="outline">
+                      Send Message
+                    </Button>
+                  </PropertyActions>
+                </PropertyContent>
+              </PropertyCard>
             ))}
-          </Grid>
+          </PropertiesGrid>
         </Container>
       </Section>
       
-      <CallToActionSection variant="dark" padding="large">
-        <Container>
-          <CTAContent>
-            <CTATitle>Ready to Start Your Project?</CTATitle>
-            <CTAText>
-              Contact us today to discuss your construction needs and get a free quote.
-            </CTAText>
-            <Button to="/contact" size="large">
-              Contact Us Now
-            </Button>
-          </CTAContent>
-        </Container>
-      </CallToActionSection>
+      <ModalOverlay $isOpen={!!selectedProperty} onClick={handleCloseModal}>
+        <ModalContent onClick={(e) => e.stopPropagation()}>
+          <ModalHeader>
+            <ModalTitle>
+              {property?.title} - {property?.location}
+            </ModalTitle>
+            <ModalClose onClick={handleCloseModal}>&times;</ModalClose>
+          </ModalHeader>
+          <ModalBody>
+            <ViewToggle>
+              <ToggleButton 
+                $active={viewMode === 'photo'} 
+                onClick={() => setViewMode('photo')}
+              >
+                Photo
+              </ToggleButton>
+              <ToggleButton 
+                $active={viewMode === 'map'} 
+                onClick={() => setViewMode('map')}
+              >
+                Map
+              </ToggleButton>
+            </ViewToggle>
+            
+            {viewMode === 'photo' && property && (
+              <Gallery 
+                items={property.images as any}
+              />
+            )}
+            
+            {viewMode === 'map' && (
+              <Map 
+                locations={mapLocations}
+                center={property?.mapLocation}
+                zoom={15}
+                height="100%"
+              />
+            )}
+          </ModalBody>
+        </ModalContent>
+      </ModalOverlay>
     </>
   );
 };

@@ -66,13 +66,13 @@ const buttonStyles = css<StyledButtonProps>`
   ${({ $variant, theme }) =>
     $variant === 'primary' &&
     css`
-      background-color: ${theme.colors.gold};
-      color: ${theme.colors.darkGrey};
+      background-color: ${theme.colors.red};
+      color: ${theme.colors.white};
       
       &:hover:not(:disabled) {
-        background-color: ${theme.colors.darkGrey};
-        color: ${theme.colors.gold};
-        border-color: ${theme.colors.gold};
+        background-color: ${theme.colors.darkRed};
+        color: ${theme.colors.white};
+        border-color: ${theme.colors.darkRed};
         transform: translateY(-3px);
         box-shadow: ${theme.shadows.medium};
       }
@@ -86,11 +86,11 @@ const buttonStyles = css<StyledButtonProps>`
   ${({ $variant, theme }) =>
     $variant === 'secondary' &&
     css`
-      background-color: ${theme.colors.navyBlue};
+      background-color: ${theme.colors.darkGrey};
       color: ${theme.colors.white};
       
       &:hover:not(:disabled) {
-        background-color: ${theme.colors.darkGrey};
+        background-color: ${theme.colors.red};
         transform: translateY(-3px);
         box-shadow: ${theme.shadows.medium};
       }
@@ -105,12 +105,12 @@ const buttonStyles = css<StyledButtonProps>`
     $variant === 'outline' &&
     css`
       background-color: transparent;
-      color: ${theme.colors.gold};
-      border-color: ${theme.colors.gold};
+      color: ${theme.colors.red};
+      border-color: ${theme.colors.red};
       
       &:hover:not(:disabled) {
-        background-color: ${theme.colors.gold};
-        color: ${theme.colors.darkGrey};
+        background-color: ${theme.colors.red};
+        color: ${theme.colors.white};
         transform: translateY(-3px);
         box-shadow: ${theme.shadows.medium};
       }
@@ -125,13 +125,13 @@ const buttonStyles = css<StyledButtonProps>`
     $variant === 'text' &&
     css`
       background-color: transparent;
-      color: ${theme.colors.gold};
+      color: ${theme.colors.red};
       padding-left: 0;
       padding-right: 0;
       border: none;
       
       &:hover:not(:disabled) {
-        color: ${theme.colors.navyBlue};
+        color: ${theme.colors.darkRed};
         transform: translateY(-3px);
       }
       

@@ -4,15 +4,9 @@ import Section from '../components/ui/Section';
 import Container from '../components/ui/Container';
 import SectionTitle from '../components/ui/SectionTitle';
 import Parallax from '../components/ui/Parallax';
-import Grid from '../components/ui/Grid';
-import Card from '../components/ui/Card';
 
-// Placeholder image URLs - replace with actual images
+// Placeholder image URL - replace with actual image
 const heroImage = 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1737&q=80';
-const teamImage1 = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80';
-const teamImage2 = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80';
-const teamImage3 = 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-const teamImage4 = 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80';
 
 const PageHeader = styled(Parallax)`
   height: 50vh;
@@ -102,45 +96,6 @@ const CardText = styled.p`
   line-height: 1.6;
 `;
 
-const ValueCard = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  box-shadow: ${({ theme }) => theme.shadows.small};
-  padding: ${({ theme }) => theme.spacing.lg};
-  text-align: center;
-  transition: transform ${({ theme }) => theme.transitions.medium};
-  
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: ${({ theme }) => theme.shadows.medium};
-  }
-`;
-
-const ValueIcon = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: ${({ theme }) => theme.colors.gold};
-  color: ${({ theme }) => theme.colors.darkGrey};
-  border-radius: ${({ theme }) => theme.borderRadius.round};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto ${({ theme }) => theme.spacing.md};
-  font-size: 1.5rem;
-`;
-
-const ValueTitle = styled.h3`
-  margin-bottom: ${({ theme }) => theme.spacing.sm};
-  color: ${({ theme }) => theme.colors.darkGrey};
-`;
-
-const ValueDescription = styled.p`
-  color: ${({ theme }) => theme.colors.darkGrey};
-`;
-
-const TeamMemberCard = styled(Card)`
-  text-align: center;
-`;
 
 const AboutPage: React.FC = () => {
   return (
@@ -218,106 +173,6 @@ const AboutPage: React.FC = () => {
         </Container>
       </Section>
       
-      <Section padding="large">
-        <Container>
-          <SectionTitle
-            title="Our Core Values"
-            subtitle="The principles that guide everything we do"
-            alignment="center"
-          />
-          
-          <Grid
-            columns={{
-              xs: 1,
-              sm: 2,
-              md: 2,
-              lg: 4,
-            }}
-            gap="medium"
-          >
-            <ValueCard>
-              <ValueIcon>🤝</ValueIcon>
-              <ValueTitle>Integrity</ValueTitle>
-              <ValueDescription>
-                We conduct our business with honesty, transparency, and ethical practices.
-              </ValueDescription>
-            </ValueCard>
-            
-            <ValueCard>
-              <ValueIcon>⭐</ValueIcon>
-              <ValueTitle>Excellence</ValueTitle>
-              <ValueDescription>
-                We strive for excellence in every aspect of our work, from planning to execution.
-              </ValueDescription>
-            </ValueCard>
-            
-            <ValueCard>
-              <ValueIcon>🔄</ValueIcon>
-              <ValueTitle>Innovation</ValueTitle>
-              <ValueDescription>
-                We embrace new technologies and methods to improve our services and results.
-              </ValueDescription>
-            </ValueCard>
-            
-            <ValueCard>
-              <ValueIcon>🌱</ValueIcon>
-              <ValueTitle>Sustainability</ValueTitle>
-              <ValueDescription>
-                We are committed to environmentally responsible construction practices.
-              </ValueDescription>
-            </ValueCard>
-          </Grid>
-        </Container>
-      </Section>
-      
-      <Section variant="dark" padding="large">
-        <Container>
-          <SectionTitle
-            title="Our Leadership Team"
-            subtitle="Meet the people who make R&R Construction exceptional"
-            alignment="center"
-            light
-          />
-          
-          <Grid
-            columns={{
-              xs: 1,
-              sm: 2,
-              md: 2,
-              lg: 4,
-            }}
-            gap="medium"
-          >
-            <TeamMemberCard
-              image={teamImage1}
-              title="Robert Rodriguez"
-              subtitle="Co-Founder & CEO"
-              content="With over 25 years of experience in the construction industry, Robert oversees the strategic direction of R&R Construction."
-            />
-            
-            <TeamMemberCard
-              image={teamImage2}
-              title="Maria Gonzalez"
-              subtitle="Chief Operations Officer"
-              content="Maria ensures that our projects are delivered on time, within budget, and to the highest standards of quality."
-            />
-            
-            <TeamMemberCard
-              image={teamImage3}
-              title="David Martinez"
-              subtitle="Chief Financial Officer"
-              content="David manages the financial aspects of our business, ensuring our continued growth and stability."
-            />
-            
-            <TeamMemberCard
-              image={teamImage4}
-              title="Sarah Johnson"
-              subtitle="Director of Client Relations"
-              content="Sarah works closely with our clients to understand their needs and ensure their satisfaction throughout the project."
-            />
-          </Grid>
-        </Container>
-      </Section>
     </>
   );
 };

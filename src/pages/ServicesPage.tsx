@@ -277,21 +277,21 @@ const ServicesPage: React.FC = () => {
           </ServiceSection>
           
           <ServiceSection>
-            <ServiceImage src={designBuildImage} alt="Design-Build Services" />
+            <ServiceImage src={designBuildImage} alt="Commercial Development" />
             <ServiceContent className="content">
-              <h3>Design-Build Services</h3>
+              <h3>Commercial Development</h3>
               <p>
-                Our design-build approach streamlines the construction process by combining 
-                design and construction services under one contract. This integrated approach 
-                leads to faster project completion, cost savings, and better communication.
+                Our commercial development services cater to businesses of all sizes. From office 
+                buildings to retail spaces, we deliver high-quality commercial construction projects 
+                that meet your business needs and exceed your expectations.
               </p>
               <FeatureList>
-                <FeatureItem>Single Point of Responsibility</FeatureItem>
-                <FeatureItem>Streamlined Communication</FeatureItem>
-                <FeatureItem>Cost Savings</FeatureItem>
-                <FeatureItem>Faster Project Completion</FeatureItem>
-                <FeatureItem>Collaborative Approach</FeatureItem>
-                <FeatureItem>Integrated Design and Construction</FeatureItem>
+                <FeatureItem>Office Buildings</FeatureItem>
+                <FeatureItem>Retail Spaces</FeatureItem>
+                <FeatureItem>Restaurants</FeatureItem>
+                <FeatureItem>Medical Facilities</FeatureItem>
+                <FeatureItem>Industrial Buildings</FeatureItem>
+                <FeatureItem>Mixed-Use Developments</FeatureItem>
               </FeatureList>
               <Button to="/contact" variant="primary">
                 Get a Quote

@@ -32,51 +32,13 @@ const generalFaqs = [
     title: 'How do I request a quote for my project?',
     content: 'You can request a quote by contacting us through our website, calling our office, or visiting us in person. We\'ll gather information about your project and provide a detailed estimate.',
   },
-];
-
-const commercialFaqs = [
   {
     title: 'What types of commercial projects do you work on?',
     content: 'We work on a variety of commercial projects, including office buildings, retail spaces, restaurants, medical facilities, hotels, and industrial buildings. Our team has the expertise to handle commercial projects of all sizes.',
   },
   {
-    title: 'How long does a typical commercial construction project take?',
-    content: 'The timeline for commercial projects varies depending on the size, complexity, and specific requirements. A small retail space might take 3-6 months, while a larger office building could take 12-18 months. We provide detailed timelines during the planning phase.',
-  },
-  {
-    title: 'Do you handle the permitting process for commercial projects?',
-    content: 'Yes, we handle all aspects of the permitting process for our commercial projects. Our team is familiar with local regulations and requirements, ensuring a smooth approval process.',
-  },
-  {
-    title: 'Can you work with our architect or do you provide design services?',
-    content: 'We can work with your existing architect or provide design-build services through our network of trusted architects and designers. Our flexible approach allows us to adapt to your specific needs.',
-  },
-  {
-    title: 'Do you offer sustainable or green building options for commercial projects?',
-    content: 'Yes, we offer sustainable building options and have experience with LEED-certified projects. We can incorporate energy-efficient systems, sustainable materials, and environmentally friendly practices into your commercial project.',
-  },
-];
-
-const residentialFaqs = [
-  {
     title: 'How much does it cost to build a custom home?',
     content: 'The cost of building a custom home varies based on factors such as size, materials, finishes, and location. We work with clients to develop a budget that meets their needs and provide transparent pricing throughout the process.',
-  },
-  {
-    title: 'How long does it take to build a custom home?',
-    content: 'On average, building a custom home takes 6-12 months, depending on the size and complexity of the project. Factors such as weather, material availability, and design changes can affect the timeline.',
-  },
-  {
-    title: 'Can I make changes to the design during construction?',
-    content: 'Yes, we understand that clients may want to make changes during the construction process. We have a change order system in place to accommodate modifications while keeping the project on track.',
-  },
-  {
-    title: 'Do you offer warranties on your residential construction?',
-    content: 'Yes, we provide warranties on our residential construction work. Our standard warranty covers workmanship for one year, and many of the products and materials we use come with manufacturer warranties.',
-  },
-  {
-    title: 'Can I visit the construction site during the building process?',
-    content: 'We encourage clients to visit the construction site during scheduled walkthroughs with our project manager. For safety reasons, we ask that all visits be arranged in advance.',
   },
 ];
 
@@ -163,16 +125,6 @@ const FAQPage: React.FC = () => {
           <AccordionWrapper>
             <CategoryTitle>General Questions</CategoryTitle>
             <Accordion items={generalFaqs} />
-          </AccordionWrapper>
-          
-          <AccordionWrapper>
-            <CategoryTitle>Commercial Construction</CategoryTitle>
-            <Accordion items={commercialFaqs} />
-          </AccordionWrapper>
-          
-          <AccordionWrapper>
-            <CategoryTitle>Residential Construction</CategoryTitle>
-            <Accordion items={residentialFaqs} />
           </AccordionWrapper>
         </Container>
       </Section>

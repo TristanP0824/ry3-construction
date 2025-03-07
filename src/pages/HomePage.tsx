@@ -140,35 +140,6 @@ const AboutText = styled.p`
   line-height: 1.6;
 `;
 
-const StatsSection = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: ${({ theme }) => theme.spacing.lg};
-  
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-`;
-
-const StatCard = styled.div`
-  text-align: center;
-  padding: ${({ theme }) => theme.spacing.lg};
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  box-shadow: ${({ theme }) => theme.shadows.small};
-`;
-
-const StatNumber = styled.div`
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.red};
-  margin-bottom: ${({ theme }) => theme.spacing.xs};
-`;
-
-const StatLabel = styled.div`
-  font-size: 1rem;
-  color: ${({ theme }) => theme.colors.darkGrey};
-`;
 
 const CallToActionSection = styled(Section)`
   text-align: center;
@@ -253,6 +224,17 @@ const HomePage: React.FC = () => {
                 Learn More
               </Button>
             </ServiceCard>
+            
+            <ServiceCard>
+              <ServiceIcon>🏢</ServiceIcon>
+              <ServiceTitle>Commercial Development</ServiceTitle>
+              <ServiceDescription>
+                Professional construction services for commercial properties and businesses.
+              </ServiceDescription>
+              <Button to="/services" variant="text">
+                Learn More
+              </Button>
+            </ServiceCard>
           </ServicesGrid>
         </Container>
       </Section>
@@ -280,37 +262,6 @@ const HomePage: React.FC = () => {
         </Container>
       </Section>
       
-      <Section padding="large">
-        <Container>
-          <SectionTitle
-            title="Why Choose Us"
-            subtitle="Our commitment to quality and customer satisfaction sets us apart"
-            alignment="center"
-          />
-          
-          <StatsSection>
-            <StatCard>
-              <StatNumber>15+</StatNumber>
-              <StatLabel>Years of Experience</StatLabel>
-            </StatCard>
-            
-            <StatCard>
-              <StatNumber>500+</StatNumber>
-              <StatLabel>Projects Completed</StatLabel>
-            </StatCard>
-            
-            <StatCard>
-              <StatNumber>50+</StatNumber>
-              <StatLabel>Team Members</StatLabel>
-            </StatCard>
-            
-            <StatCard>
-              <StatNumber>98%</StatNumber>
-              <StatLabel>Client Satisfaction</StatLabel>
-            </StatCard>
-          </StatsSection>
-        </Container>
-      </Section>
       
       <CallToActionSection variant="dark" padding="large">
         <Container>
