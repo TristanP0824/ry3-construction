@@ -15,118 +15,140 @@ const heroImage = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?
 const properties = [
   {
     id: '1',
-    title: 'Harlingen Terrace',
-    price: '$0',
-    status: 'coming-soon',
-    location: 'Harlingen, TX',
-    description: 'Introducing Harlingen\'s newest townhomes - gorgeous, modern, and thoughtfully designed with high-end finishes and unbeatable convenience.',
+    title: '13941 Isaiah Ct',
+    price: '$205,000',
+    status: 'for-sale',
+    location: 'La Feria, TX',
+    description: 'Discover refined living in a 3 bedroom, 2 bathroom, new construction home nestled in the community, Mariposa Ranch Subdivision.',
     features: {
       beds: 3,
       baths: 2,
-      sqft: 1680
+      sqft: 1140
     },
     images: [
       {
         id: '1-1',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Harlingen Terrace - Exterior'
+        thumbnail: 'src/assets/images/Property 1/IMG_9215.JPG',
+        source: 'src/assets/images/Property 1/IMG_9215.JPG',
+        title: '13941 Isaiah Ct - Exterior'
       },
       {
         id: '1-2',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Harlingen Terrace - Living Room'
+        thumbnail: 'src/assets/images/Property 1/IMG_9216.JPG',
+        source: 'src/assets/images/Property 1/IMG_9216.JPG',
+        title: '13941 Isaiah Ct - Entrance'
       },
       {
         id: '1-3',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Harlingen Terrace - Kitchen'
+        thumbnail: 'src/assets/images/Property 1/IMG_9217.JPG',
+        source: 'src/assets/images/Property 1/IMG_9217.JPG',
+        title: '13941 Isaiah Ct - Kitchen'
+      },
+      {
+        id: '1-4',
+        type: 'image',
+        thumbnail: 'src/assets/images/Property 1/IMG_9230.jpeg',
+        source: 'src/assets/images/Property 1/IMG_9230.jpeg',
+        title: '13941 Isaiah Ct - Outside View'
       }
     ],
     mapLocation: {
-      lat: 26.1906,
-      lng: -97.6961
+      lat: 26.17903,
+      lng: -97.80001
     }
   },
   {
     id: '2',
-    title: 'Bicentennial Townhomes',
-    price: '$0',
-    status: 'coming-soon',
-    location: 'McAllen, TX',
-    description: 'Experience luxury living in McAllen with these brand-new, gorgeous townhomes featuring modern designs, high-end finishes, and a prime location!',
+    title: '13953 Isaiah Ct',
+    price: '$213,000',
+    status: 'for-sale',
+    location: 'La Feria, TX',
+    description: 'Discover refined living in a 3 bedroom, 2 bathroom, new construction home nestled in the community, Mariposa Ranch Subdivision.',
     features: {
       beds: 3,
       baths: 2,
-      sqft: 1865
+      sqft: 1219
     },
     images: [
       {
         id: '2-1',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Bicentennial Townhomes - Exterior'
+        thumbnail: 'src/assets/images/Property 2/1_untitled-22.jpg',
+        source: 'src/assets/images/Property 2/1_untitled-22.jpg',
+        title: '13953 Isaiah Ct - Exterior'
       },
       {
         id: '2-2',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Bicentennial Townhomes - Living Room'
+        thumbnail: 'src/assets/images/Property 2/7_untitled-21.jpg',
+        source: 'src/assets/images/Property 2/7_untitled-21.jpg',
+        title: '13953 Isaiah Ct - Living Room'
       },
       {
         id: '2-3',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: 'Bicentennial Townhomes - Kitchen'
+        thumbnail: 'src/assets/images/Property 2/4_untitled-61.jpg',
+        source: 'src/assets/images/Property 2/4_untitled-61.jpg',
+        title: '13953 Isaiah Ct - Kitchen'
+      },
+      {
+        id: '2-4',
+        type: 'image',
+        thumbnail: 'src/assets/images/Property 2/14_untitled-30.jpg',
+        source: 'src/assets/images/Property 2/14_untitled-30.jpg',
+        title: '13953 Isaiah Ct - Master-Closet'
       }
     ],
     mapLocation: {
-      lat: 26.2034,
-      lng: -98.2300
+      lat: 26.179004701469637,
+      lng: -97.79974731871924
     }
   },
   {
     id: '3',
-    title: '2604 E Comal Rd',
-    price: '$285,000',
+    title: '703 Thornton Ln',
+    price: '$210,000',
     status: 'for-sale',
-    location: 'Highland Heights Subdivision',
-    description: 'Discover refined living in a 3-bedroom, 2.5 bathroom, 1,482 Living SqFt home nestled in the community, Highland Heights Subdivision.',
+    location: 'Brownsville, TX',
+    description: 'Introducing a modern contemporary home that combines sophisticated style, open layout, and high-end finishes for a perfect blend of elegance and comfort.',
     features: {
       beds: 3,
-      baths: 2.5,
-      sqft: 1482
+      baths: 2,
+      sqft: 1200
     },
     images: [
       {
         id: '3-1',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80',
-        source: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80',
-        title: '2604 E Comal Rd - Exterior'
+        thumbnail: 'src/assets/images/Property 3/20_untitled-142.jpg',
+        source: 'src/assets/images/Property 3/20_untitled-142.jpg',
+        title: '703 Thornton Ln - Exterior'
       },
       {
         id: '3-2',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: '2604 E Comal Rd - Living Room'
+        thumbnail: 'src/assets/images/Property 3/21_untitled-155.jpg',
+        source: 'src/assets/images/Property 3/21_untitled-155.jpg',
+        title: '703 Thornton Ln - Exterior'
       },
       {
         id: '3-3',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: '2604 E Comal Rd - Kitchen'
-      }
+        thumbnail: 'src/assets/images/Property 3/22_untitled-157.jpg',
+        source: 'src/assets/images/Property 3/22_untitled-157.jpg',
+        title: '703 Thornton Ln - Exterior'
+      },
+      {
+        id: '3-4',
+        type: 'image',
+        thumbnail: 'src/assets/images/Property 3/23_untitled-158.jpg',
+        source: 'src/assets/images/Property 3/23_untitled-158.jpg',
+        title: '703 Thornton Ln - Exterior'
+      },
+    
     ],
     mapLocation: {
       lat: 26.1800,
@@ -135,38 +157,46 @@ const properties = [
   },
   {
     id: '4',
-    title: '1720 E Tip',
-    price: '$315,000',
+    title: '653 Thornton Ln',
+    price: '$205,000',
     status: 'for-sale',
-    location: 'Heights on Wisconsin Phase 3 Subdivision',
-    description: 'Discover refined living in a 3-bedroom, 2.5 bathroom, 1,678 Living SqFt home nestled in the community, Heights on Wisconsin Phase 3 Subdivision.',
+    location: 'Brownsville, TX',
+    description: 'This newly built home offers modern design, high quality finishes , and a minimalist style. With an open concept layout and top tier craftsmanship, it’s the perfect blend of comfort and sophistication.',
     features: {
       beds: 3,
-      baths: 2.5,
-      sqft: 1678
+      baths: 2,
+      sqft: 1140
     },
     images: [
       {
         id: '4-1',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: '1720 E Tip - Exterior'
+        thumbnail: 'src/assets/images/Property 4/IMG_6972.JPG',
+        source: 'src/assets/images/Property 4/IMG_6972.JPG',
+        title: '653 Thornton Ln - Front Exterior'
       },
       {
         id: '4-2',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: '1720 E Tip - Living Room'
+        thumbnail: 'src/assets/images/Property 4/IMG_6964.JPG',
+        source: 'src/assets/images/Property 4/IMG_6964.JPG',
+        title: '653 Thornton Ln - Living Room'
       },
       {
         id: '4-3',
         type: 'image',
-        thumbnail: 'https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        source: 'https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-        title: '1720 E Tip - Kitchen'
-      }
+        thumbnail: 'src/assets/images/Property 4/IMG_6968.JPG',
+        source: 'src/assets/images/Property 4/IMG_6968.JPG',
+        title: '653 Thornton Ln - Exterior'
+      },
+      {
+        id: '4-4',
+        type: 'image',
+        thumbnail: 'src/assets/images/Property 4/IMG_6976.JPG',
+        source: 'src/assets/images/Property 4/IMG_6976.JPG',
+        title: '653 Thornton Ln - Kitchen'
+      },
+     
     ],
     mapLocation: {
       lat: 26.2100,

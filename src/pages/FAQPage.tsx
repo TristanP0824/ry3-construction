@@ -21,10 +21,6 @@ const generalFaqs = [
     content: 'R&R Construction was founded in 2005 and has been providing high-quality construction services to the Rio Grande Valley for over 15 years.',
   },
   {
-    title: 'Are you licensed and insured?',
-    content: 'Yes, R&R Construction is fully licensed, bonded, and insured. We maintain all necessary certifications and insurance coverage to protect our clients and projects.',
-  },
-  {
     title: 'What types of projects do you handle?',
     content: 'We handle a wide range of construction projects, including commercial construction, residential development, custom home building, renovations, and more. Our team has experience with projects of various sizes and complexities.',
   },
@@ -37,7 +33,7 @@ const generalFaqs = [
     content: 'We work on a variety of commercial projects, including office buildings, retail spaces, restaurants, medical facilities, hotels, and industrial buildings. Our team has the expertise to handle commercial projects of all sizes.',
   },
   {
-    title: 'How much does it cost to build a custom home?',
+    title: 'What is the process in building a home?',
     content: 'The cost of building a custom home varies based on factors such as size, materials, finishes, and location. We work with clients to develop a budget that meets their needs and provide transparent pricing throughout the process.',
   },
 ];
