@@ -7,6 +7,40 @@ import Button from '../components/ui/Button';
 import Map from '../components/map/Map';
 import Gallery from '../components/gallery/Gallery';
 
+// Define types for our gallery items
+interface GalleryItem {
+  id: string;
+  type: 'image' | 'video';
+  thumbnail: string;
+  source: string;
+  title?: string;
+  description?: string;
+}
+
+// Import images for Property 1
+import property1Image1 from '../assets/images/Property 1/IMG_9215.JPG';
+import property1Image2 from '../assets/images/Property 1/IMG_9216.JPG';
+import property1Image3 from '../assets/images/Property 1/IMG_9217.JPG';
+import property1Image4 from '../assets/images/Property 1/IMG_9230.jpeg';
+
+// Import images for Property 2
+import property2Image1 from '../assets/images/Property 2/1_untitled-22.jpg';
+import property2Image2 from '../assets/images/Property 2/7_untitled-21.jpg';
+import property2Image3 from '../assets/images/Property 2/4_untitled-61.jpg';
+import property2Image4 from '../assets/images/Property 2/14_untitled-30.jpg';
+
+// Import images for Property 3
+import property3Image1 from '../assets/images/Property 3/20_untitled-142.jpg';
+import property3Image2 from '../assets/images/Property 3/21_untitled-155.jpg';
+import property3Image3 from '../assets/images/Property 3/22_untitled-157.jpg';
+import property3Image4 from '../assets/images/Property 3/23_untitled-158.jpg';
+
+// Import images for Property 4
+import property4Image1 from '../assets/images/Property 4/IMG_6972.JPG';
+import property4Image2 from '../assets/images/Property 4/IMG_6964.JPG';
+import property4Image3 from '../assets/images/Property 4/IMG_6968.JPG';
+import property4Image4 from '../assets/images/Property 4/IMG_6976.JPG';
+
 
 // Placeholder image URLs - replace with actual images
 const heroImage = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
@@ -29,29 +63,29 @@ const properties = [
       {
         id: '1-1',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 1/IMG_9215.JPG',
-        source: 'src/assets/images/Property 1/IMG_9215.JPG',
+        thumbnail: property1Image1,
+        source: property1Image1,
         title: '13941 Isaiah Ct - Exterior'
       },
       {
         id: '1-2',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 1/IMG_9216.JPG',
-        source: 'src/assets/images/Property 1/IMG_9216.JPG',
+        thumbnail: property1Image2,
+        source: property1Image2,
         title: '13941 Isaiah Ct - Entrance'
       },
       {
         id: '1-3',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 1/IMG_9217.JPG',
-        source: 'src/assets/images/Property 1/IMG_9217.JPG',
+        thumbnail: property1Image3,
+        source: property1Image3,
         title: '13941 Isaiah Ct - Kitchen'
       },
       {
         id: '1-4',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 1/IMG_9230.jpeg',
-        source: 'src/assets/images/Property 1/IMG_9230.jpeg',
+        thumbnail: property1Image4,
+        source: property1Image4,
         title: '13941 Isaiah Ct - Outside View'
       }
     ],
@@ -76,29 +110,29 @@ const properties = [
       {
         id: '2-1',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 2/1_untitled-22.jpg',
-        source: 'src/assets/images/Property 2/1_untitled-22.jpg',
+        thumbnail: property2Image1,
+        source: property2Image1,
         title: '13953 Isaiah Ct - Exterior'
       },
       {
         id: '2-2',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 2/7_untitled-21.jpg',
-        source: 'src/assets/images/Property 2/7_untitled-21.jpg',
+        thumbnail: property2Image2,
+        source: property2Image2,
         title: '13953 Isaiah Ct - Living Room'
       },
       {
         id: '2-3',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 2/4_untitled-61.jpg',
-        source: 'src/assets/images/Property 2/4_untitled-61.jpg',
+        thumbnail: property2Image3,
+        source: property2Image3,
         title: '13953 Isaiah Ct - Kitchen'
       },
       {
         id: '2-4',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 2/14_untitled-30.jpg',
-        source: 'src/assets/images/Property 2/14_untitled-30.jpg',
+        thumbnail: property2Image4,
+        source: property2Image4,
         title: '13953 Isaiah Ct - Master-Closet'
       }
     ],
@@ -123,29 +157,29 @@ const properties = [
       {
         id: '3-1',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 3/20_untitled-142.jpg',
-        source: 'src/assets/images/Property 3/20_untitled-142.jpg',
+        thumbnail: property3Image1,
+        source: property3Image1,
         title: '703 Thornton Ln - Exterior'
       },
       {
         id: '3-2',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 3/21_untitled-155.jpg',
-        source: 'src/assets/images/Property 3/21_untitled-155.jpg',
+        thumbnail: property3Image2,
+        source: property3Image2,
         title: '703 Thornton Ln - Exterior'
       },
       {
         id: '3-3',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 3/22_untitled-157.jpg',
-        source: 'src/assets/images/Property 3/22_untitled-157.jpg',
+        thumbnail: property3Image3,
+        source: property3Image3,
         title: '703 Thornton Ln - Exterior'
       },
       {
         id: '3-4',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 3/23_untitled-158.jpg',
-        source: 'src/assets/images/Property 3/23_untitled-158.jpg',
+        thumbnail: property3Image4,
+        source: property3Image4,
         title: '703 Thornton Ln - Exterior'
       },
     
@@ -171,29 +205,29 @@ const properties = [
       {
         id: '4-1',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 4/IMG_6972.JPG',
-        source: 'src/assets/images/Property 4/IMG_6972.JPG',
+        thumbnail: property4Image1,
+        source: property4Image1,
         title: '653 Thornton Ln - Front Exterior'
       },
       {
         id: '4-2',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 4/IMG_6964.JPG',
-        source: 'src/assets/images/Property 4/IMG_6964.JPG',
+        thumbnail: property4Image2,
+        source: property4Image2,
         title: '653 Thornton Ln - Living Room'
       },
       {
         id: '4-3',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 4/IMG_6968.JPG',
-        source: 'src/assets/images/Property 4/IMG_6968.JPG',
+        thumbnail: property4Image3,
+        source: property4Image3,
         title: '653 Thornton Ln - Exterior'
       },
       {
         id: '4-4',
         type: 'image',
-        thumbnail: 'src/assets/images/Property 4/IMG_6976.JPG',
-        source: 'src/assets/images/Property 4/IMG_6976.JPG',
+        thumbnail: property4Image4,
+        source: property4Image4,
         title: '653 Thornton Ln - Kitchen'
       },
      
@@ -521,7 +555,7 @@ const ProjectsPage: React.FC = () => {
             
             {viewMode === 'photo' && property && (
               <Gallery 
-                items={property.images as any}
+                items={property.images as GalleryItem[]}
               />
             )}
             
