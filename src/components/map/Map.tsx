@@ -79,7 +79,7 @@ const Map: React.FC<MapProps> = ({
   
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAwGiCKfc7CyX-t_Hvya7Cn-nnKyOtxr24', // Replace with your Google Maps API key
+    googleMapsApiKey: '', // Replace with your Google Maps API key
   });
   
   const handleMarkerClick = (location: MapLocation) => {
