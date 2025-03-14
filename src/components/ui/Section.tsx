@@ -72,7 +72,7 @@ const StyledSection = styled.section<StyledSectionProps>`
   ${({ $variant, theme }) =>
     $variant === 'secondary' &&
     css`
-      background-color: ${theme.colors.lightGrey};
+      background-color: ${theme.colors.white};
       color: ${theme.colors.darkGrey};
     `}
   

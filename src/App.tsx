@@ -19,7 +19,7 @@ import NotFoundPage from './pages/NotFoundPage';
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      <GlobalStyles theme={theme}/>
       <Router>
         <Layout>
           <Routes>
