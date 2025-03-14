@@ -208,9 +208,6 @@ const Footer: React.FC = () => {
             <FooterLink>
               <Link to="/services">Project Management</Link>
             </FooterLink>
-            <FooterLink>
-              <Link to="/services">Design-Build Services</Link>
-            </FooterLink>
           </FooterLinks>
         </FooterSection>
         

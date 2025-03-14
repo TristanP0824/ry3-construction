@@ -119,8 +119,8 @@ const AboutPage: React.FC = () => {
                 subtitle="Building Excellence in the Rio Grande Valley Since 2005"
               />
               <Paragraph>
-                R&R Construction was founded in 2005 by Robert Rodriguez and Richard Ramirez, 
-                two friends with a shared vision of providing high-quality construction services 
+                RY3 Construction was founded in 2023 by Ruben Ybarra abd The Ybarra Family
+                with a shared vision of providing high-quality construction services 
                 to the Rio Grande Valley. What started as a small operation has grown into one 
                 of the region's most trusted construction companies.
               </Paragraph>
@@ -130,7 +130,7 @@ const AboutPage: React.FC = () => {
                 built on our commitment to quality, integrity, and customer satisfaction.
               </Paragraph>
               <Paragraph>
-                Today, R&R Construction employs over 50 skilled professionals, including architects, 
+                Today, RY3 Construction employs over 50 skilled professionals, including architects, 
                 engineers, project managers, and craftsmen. We continue to grow and evolve, but our 
                 core values remain the same: delivering exceptional results, building lasting relationships, 
                 and contributing to the development of our community.
