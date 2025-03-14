@@ -5,9 +5,10 @@ import Container from '../components/ui/Container';
 import SectionTitle from '../components/ui/SectionTitle';
 import Button from '../components/ui/Button';
 import Parallax from '../components/ui/Parallax';
+import property1Image1 from '../assets/images/Property 1/IMG_9215.JPG';
+
 
 // Placeholder image URLs - replace with actual images
-const heroImage = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
 const aboutImage = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
 
 const HeroSection = styled(Parallax)`
@@ -170,7 +171,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <HeroSection
-        image={heroImage}
+        image={property1Image1}
         height="100vh"
         speed={0.2}
         overlayColor="#000000"

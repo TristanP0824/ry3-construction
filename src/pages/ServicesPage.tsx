@@ -6,14 +6,15 @@ import SectionTitle from '../components/ui/SectionTitle';
 import Parallax from '../components/ui/Parallax';
 import Button from '../components/ui/Button';
 import Grid from '../components/ui/Grid';
+import resdev from '../assets/images/resdev.jpg';
+import renn from '../assets/images/renn.jpg';
+import property3Image1 from '../assets/images/Property 3/20_untitled-142.jpg';
+import jwall from '../assets/images/jwall.jpg';
 
 // Placeholder image URLs - replace with actual images
 const heroImage = 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80';
-const residentialImage = 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const renovationImage = 'https://images.unsplash.com/photo-1574621100236-d25b64cfd647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80';
-const customHomeImage = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const projectManagementImage = 'https://images.unsplash.com/photo-1664575599736-c5197c684128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const designBuildImage = 'https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80';
+const designBuildImage= 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80';
+
 
 const PageHeader = styled(Parallax)`
   height: 50vh;
@@ -185,7 +186,7 @@ const ServicesPage: React.FC = () => {
           
           
           <ServiceSection>
-            <ServiceImage src={residentialImage} alt="Residential Development" />
+            <ServiceImage src={resdev} alt="Residential Development" />
             <ServiceContent className="content">
               <h3>Residential Development</h3>
               <p>
@@ -208,7 +209,7 @@ const ServicesPage: React.FC = () => {
           </ServiceSection>
           
           <ServiceSection>
-            <ServiceImage src={renovationImage} alt="Renovation & Remodeling" />
+            <ServiceImage src={renn} alt="Renovation & Remodeling" />
             <ServiceContent className="content">
               <h3>Renovation & Remodeling</h3>
               <p>
@@ -231,7 +232,7 @@ const ServicesPage: React.FC = () => {
           </ServiceSection>
           
           <ServiceSection>
-            <ServiceImage src={customHomeImage} alt="Custom Home Building" />
+            <ServiceImage src={property3Image1} alt="Custom Home Building" />
             <ServiceContent className="content">
               <h3>Custom Home Building</h3>
               <p>
@@ -254,7 +255,7 @@ const ServicesPage: React.FC = () => {
           </ServiceSection>
           
           <ServiceSection>
-            <ServiceImage src={projectManagementImage} alt="Project Management" />
+            <ServiceImage src={jwall} alt="Project Management" />
             <ServiceContent className="content">
               <h3>Project Management</h3>
               <p>

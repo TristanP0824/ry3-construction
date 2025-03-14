@@ -14,8 +14,7 @@ const avatar1 = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib
 const avatar2 = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80';
 const avatar3 = 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
 const avatar4 = 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80';
-const avatar5 = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80';
-const avatar6 = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80';
+
 
 // Testimonial data
 const testimonials = [
@@ -54,23 +53,8 @@ const testimonials = [
     content: 'The team at R&R Construction was instrumental in bringing our vision for the new medical center to life. Their expertise in commercial construction and ability to navigate complex requirements made the project a success.',
     rating: 4,
   },
-  {
-    id: '5',
-    name: 'Michael Brown',
-    role: 'Homeowner',
-    avatar: avatar5,
-    content: 'Our home renovation project was handled with care and precision by R&R Construction. They transformed our outdated space into a modern, functional home while respecting our budget constraints. We highly recommend their services!',
-    rating: 5,
-  },
-  {
-    id: '6',
-    name: 'Jennifer Lee',
-    role: 'Store Manager',
-    company: 'Retail Plaza',
-    avatar: avatar6,
-    content: 'The retail space built by R&R Construction perfectly suits our needs. Their team was communicative throughout the process and addressed any concerns promptly. The final result has received numerous compliments from our customers.',
-    rating: 4,
-  },
+
+  
 ];
 
 const PageHeader = styled(Parallax)`
