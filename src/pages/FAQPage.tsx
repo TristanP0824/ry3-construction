@@ -57,16 +57,7 @@ const PageTitle = styled.h1`
   }
 `;
 
-const CategoryTitle = styled.h2`
-  font-size: 1.8rem;
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-  color: ${({ theme }) => theme.colors.darkGrey};
-  text-align: center;
-  
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 2.2rem;
-  }
-`;
+
 
 const AccordionWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xxl};
@@ -119,7 +110,7 @@ const FAQPage: React.FC = () => {
           />
           
           <AccordionWrapper>
-            <CategoryTitle>General Questions</CategoryTitle>
+            
             <Accordion items={generalFaqs} />
           </AccordionWrapper>
         </Container>
