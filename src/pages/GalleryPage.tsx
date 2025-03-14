@@ -6,84 +6,83 @@ import SectionTitle from '../components/ui/SectionTitle';
 import Parallax from '../components/ui/Parallax';
 import Gallery from '../components/gallery/Gallery';
 
-// Placeholder image URLs - replace with actual images
-const heroImage = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const galleryImage1 = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const galleryImage2 = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const galleryImage3 = 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const galleryImage4 = 'https://images.unsplash.com/photo-1574621100236-d25b64cfd647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80';
-const galleryImage5 = 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1737&q=80';
-const galleryImage6 = 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80';
-const galleryImage7 = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
-const galleryImage8 = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80';
+// Import images for Property 1
+import property1Image1 from '../assets/images/Property 1/IMG_9215.JPG';
+import property1Image2 from '../assets/images/Property 1/IMG_9216.JPG';
+import property1Image3 from '../assets/images/Property 1/IMG_9217.JPG';
+import property1Image4 from '../assets/images/Property 1/IMG_9230.jpeg';
 
-// Video URLs - replace with actual videos
-const videoUrl1 = 'https://example.com/video1.mp4';
-const videoUrl2 = 'https://example.com/video2.mp4';
+// Import images for Property 2
+import property2Image1 from '../assets/images/Property 2/1_untitled-22.jpg';
+import property2Image2 from '../assets/images/Property 2/7_untitled-21.jpg';
+
+import property2Image4 from '../assets/images/Property 2/14_untitled-30.jpg';
+
+import property4Image4 from '../assets/images/Property 4/IMG_6972.JPG';
 
 // Gallery data
 const galleryItems = [
   {
     id: '1',
     type: 'image' as const,
-    thumbnail: galleryImage1,
-    source: galleryImage1,
+    thumbnail: property1Image1,
+    source: property1Image1,
     title: 'Valley View Office Complex',
     description: 'Modern office complex in Brownsville, TX',
   },
   {
     id: '2',
     type: 'image' as const,
-    thumbnail: galleryImage2,
-    source: galleryImage2,
+    thumbnail: property1Image2,
+    source: property1Image2,
     title: 'Riverside Luxury Homes',
     description: 'Custom-built luxury homes in McAllen, TX',
   },
   {
     id: '3',
     type: 'image' as const,
-    thumbnail: galleryImage3,
-    source: galleryImage3,
+    thumbnail: property1Image3,
+    source: property1Image3,
     title: 'Palm Heights Apartments',
     description: 'Multi-family residential development in Harlingen, TX',
   },
   {
     id: '4',
     type: 'video' as const,
-    thumbnail: galleryImage4,
-    source: videoUrl1,
+    thumbnail: property1Image4,
+    source: property1Image4,
     title: 'Construction Time-lapse',
     description: 'Time-lapse of the Coastal Medical Center construction',
   },
   {
     id: '5',
     type: 'image' as const,
-    thumbnail: galleryImage5,
-    source: galleryImage5,
+    thumbnail: property2Image1,
+    source: property2Image1,
     title: 'Downtown Retail Plaza',
     description: 'Vibrant retail plaza in Los Fresnos, TX',
   },
   {
     id: '6',
     type: 'image' as const,
-    thumbnail: galleryImage6,
-    source: galleryImage6,
+    thumbnail: property2Image2,
+    source: property2Image2,
     title: 'Sunset Villa Renovation',
     description: 'Historic villa renovation in Port Isabel, TX',
   },
   {
     id: '7',
     type: 'image' as const,
-    thumbnail: galleryImage7,
-    source: galleryImage7,
+    thumbnail: property4Image4,
+    source: property4Image4,
     title: 'Commercial Building Interior',
     description: 'Interior of a modern commercial building',
   },
   {
     id: '8',
     type: 'video' as const,
-    thumbnail: galleryImage8,
-    source: videoUrl2,
+    thumbnail: property2Image4,
+    source: property2Image4,
     title: 'Drone Footage',
     description: 'Aerial view of our residential development project',
   },
@@ -167,7 +166,7 @@ const GalleryPage: React.FC = () => {
   return (
     <>
       <PageHeader
-        image={heroImage}
+        image={property1Image1}
         height="50vh"
         speed={0.2}
         overlayColor="#000000"
@@ -180,7 +179,7 @@ const GalleryPage: React.FC = () => {
         <Container>
           <SectionTitle
             title="Our Project Gallery"
-            subtitle="Browse through our portfolio of completed projects"
+            subtitle="Browse through our portfolio of Past, Present, and Future projects."
             alignment="center"
           />
           
